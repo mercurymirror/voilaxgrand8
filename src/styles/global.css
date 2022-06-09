@@ -1,0 +1,30 @@
+@tailwind base;
+
+@font-face {
+ font-family: "Romie";
+ src: url("/Romie-Regular.otf") format("otf"),
+}
+
+html, body {
+  font-family: "Romie", minion, serif;
+}
+a {
+  @apply text-blue-700;
+  font-family: "Romie", minion, serif;
+}
+
+a:hover {
+  @apply border-b-2 border-blue-700;
+}
+
+@tailwind components;
+
+@tailwind utilities;
+
+/* .content p {
+  @apply my-6;
+} */
+
+.content ul {
+  @apply my-6;
+}
