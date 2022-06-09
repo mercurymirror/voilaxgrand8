@@ -14,32 +14,34 @@ const Index = () => {
         />
       }
     >
-      <a href="https://github.com/ixartz/Next-js-Boilerplate">
+      <div className='relative flex justify-center my-10 mx-4'>
         <img
           src="/sphere_3D.jpg"
           alt="sph"
+          width="600"
         />
-      </a>
+        <p className='huit absolute'>8</p>
+        </div>
       {/* Liste des liens */}
       <div className='flex justify-center'>
         <ul className="flex flex-wrap text-xl lg:text-3xl">
           <li className="mr-10 md:mr-14">
             <Link href="#X">
-              <a className="border-none text-gray-900 hover:text-blue-700">
+              <a className="border-none text-black hover:text-blue-700">
                 X
               </a>
             </Link>
           </li>
           <li className="mr-10 md:mr-14">
             <Link href="#8">
-              <a className="border-none text-gray-900 hover:text-blue-700">
+              <a className="border-none text-black hover:text-blue-700">
                 8
               </a>
             </Link>
           </li>
           <li className="mr-10 md:mr-14">
             <a
-              className="border-none text-gray-900 hover:text-blue-700"
+              className="border-none text-black hover:text-blue-700"
               href="#V"
             >
               V
@@ -47,7 +49,7 @@ const Index = () => {
           </li>
           <li className="mr-10 md:mr-14">
             <a
-              className="border-none text-gray-900 hover:text-blue-700"
+              className="border-none text-black hover:text-blue-700"
               href="https://github.com/ixartz/Next-js-Boilerplate"
             >
               P
@@ -55,7 +57,7 @@ const Index = () => {
           </li>
           <li className="mr-10 md:mr-14">
             <a
-              className="border-none text-gray-900 hover:text-blue-700"
+              className="border-none text-black hover:text-blue-700"
               href="https://github.com/ixartz/Next-js-Boilerplate"
             >
               CM
@@ -63,7 +65,7 @@ const Index = () => {
           </li>
           <li className="">
             <a
-              className="border-none text-gray-900 hover:text-blue-700"
+              className="border-none text-black hover:text-blue-700"
               href="https://github.com/ixartz/Next-js-Boilerplate"
             >
               OR
