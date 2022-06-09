@@ -1,11 +1,9 @@
-import { useRouter } from 'next/router';
 import Link from 'next/link';
 
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 
 const Index = () => {
-  const router = useRouter();
 
   return (
     <Main
