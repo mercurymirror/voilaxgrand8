@@ -12,6 +12,11 @@ module.exports = {
       '4xl': '2.25rem',
       '5xl': '3rem',
       '6xl': '4rem',
+      '10xl': '10rem',
+      'bigLetter' : '15rem',
+    },
+    lineHeight: {
+      bigLetter: 0.8,
     },
     extend: {
       colors: {

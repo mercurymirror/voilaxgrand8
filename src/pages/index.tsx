@@ -22,61 +22,101 @@ const Index = () => {
           alt="sph"
         />
       </a>
+      {/* Liste des liens */}
       <div className='flex justify-center'>
-          <ul className="flex flex-wrap text-xl">
-            <li className="mr-14">
-              <Link href="/">
-                <a className="border-none text-gray-900 hover:text-blue-700">
-                  X
-                </a>
-              </Link>
-            </li>
-            <li className="mr-14">
-              <Link href="/about/">
-                <a className="border-none text-gray-900 hover:text-blue-700">
-                  8
-                </a>
-              </Link>
-            </li>
-            <li className="mr-14">
-              <a
-                className="border-none text-gray-900 hover:text-blue-700"
-                href="https://github.com/ixartz/Next-js-Boilerplate"
-              >
-                V
+        <ul className="flex flex-wrap text-xl lg:text-3xl">
+          <li className="mr-10 md:mr-14">
+            <Link href="#X">
+              <a className="border-none text-gray-900 hover:text-blue-700">
+                X
               </a>
-            </li>
-            <li className="mr-14">
-              <a
-                className="border-none text-gray-900 hover:text-blue-700"
-                href="https://github.com/ixartz/Next-js-Boilerplate"
-              >
-                P
+            </Link>
+          </li>
+          <li className="mr-10 md:mr-14">
+            <Link href="#8">
+              <a className="border-none text-gray-900 hover:text-blue-700">
+                8
               </a>
-            </li>
-            <li className="mr-14">
-              <a
-                className="border-none text-gray-900 hover:text-blue-700"
-                href="https://github.com/ixartz/Next-js-Boilerplate"
-              >
-                CM
-              </a>
-            </li>
-            <li className="">
-              <a
-                className="border-none text-gray-900 hover:text-blue-700"
-                href="https://github.com/ixartz/Next-js-Boilerplate"
-              >
-                OR
-              </a>
-            </li>
-          </ul>
+            </Link>
+          </li>
+          <li className="mr-10 md:mr-14">
+            <a
+              className="border-none text-gray-900 hover:text-blue-700"
+              href="#V"
+            >
+              V
+            </a>
+          </li>
+          <li className="mr-10 md:mr-14">
+            <a
+              className="border-none text-gray-900 hover:text-blue-700"
+              href="https://github.com/ixartz/Next-js-Boilerplate"
+            >
+              P
+            </a>
+          </li>
+          <li className="mr-10 md:mr-14">
+            <a
+              className="border-none text-gray-900 hover:text-blue-700"
+              href="https://github.com/ixartz/Next-js-Boilerplate"
+            >
+              CM
+            </a>
+          </li>
+          <li className="">
+            <a
+              className="border-none text-gray-900 hover:text-blue-700"
+              href="https://github.com/ixartz/Next-js-Boilerplate"
+            >
+              OR
+            </a>
+          </li>
+        </ul>
+      </div>
+      {/* titre+sous-titre */}
+      <div className='flex justify-center flex-col mt-16 leading-none lg:text-2xl'>
+        <p className='text-center my-1'>VOILÀ x GRAND 8</p>
+        <p className='text-center my-1'>CLASSE MOYENNE ÉDITIONS x ONTO </p>
+      </div>
+      <hr className='w-1/2 mx-auto border-2 mt-20 border-black'></hr>
+      {/* Ancer X */}
+      <div className='mt-52 md:ml-52 grid grid-cols-2 justify-end max-w-xl gap-4'>
+        <h2 className='text-10xl md:text-bigLetter text-center leading-bigLetter'>X</h2>
+        <div id='X'>
+          <h3 className='text-3xl'>
+            VOILÀ X GRAND 8
+          </h3>
+          <p className='text-xs xl:text-base'>
+            Improvisées et non montées, simplement mixées, les pistes audio regroupées ici constituent l’archive du processus d’épuisement mené par le duo du 11 au 14 novembre 2021 à Caen (LABA).
+          </p>
         </div>
-        <div className='flex justify-center flex-col mt-16 leading-none'>
-          <p className='text-center my-1'>VOILÀ x GRAND 8</p>
-          <p className='text-center my-1'>CLASSE MOYENNE ÉDITIONS x ONTO </p>
-</div>
-    <hr className='w-1/2 mx-auto border-2 mt-20 border-black'></hr>
+      </div>
+      {/* Ancer 8 */}
+      <div className='mt-52 md:ml-52 grid grid-cols-2 justify-end max-w-xl gap-4'>
+        <h2 className='text-10xl md:text-bigLetter text-center leading-bigLetter'>8</h2>
+        <div id='8'>
+          <h3 className='text-3xl'>
+          GRAND 8
+          </h3>
+          <p className='text-xs xl:text-base'>
+          Composé de Clément et Jean, le duo de musiciens GRAND 8 <br/>
+
+Composed by Clément and Jean, the duo of musicians GRAND 8 </p>
+        </div>
+      </div>
+          {/* Ancer V */}
+          <div className='mt-52 md:ml-52 grid grid-cols-2 justify-end max-w-xl gap-4'>
+        <h2 className='text-10xl md:text-bigLetter text-center leading-bigLetter'>V</h2>
+        <div id='V'>
+          <h3 className='text-3xl'>
+          GRAND 8
+          </h3>
+          <p className='text-xs xl:text-base'>
+          Composé de Clément et Jean, le duo de musiciens GRAND 8 <br/>
+
+Composed by Clément and Jean, the duo of musicians GRAND 8 </p>
+        </div>
+      </div>
     </Main>
   );
 };
