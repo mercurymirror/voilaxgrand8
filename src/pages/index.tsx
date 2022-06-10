@@ -1,9 +1,52 @@
 import Link from 'next/link';
+import { gsap } from "gsap";
+import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 
+gsap.registerPlugin(ScrollToPlugin);
+
 const Index = () => {
+
+  const data = [
+    {
+      "id": "X",
+      "letter": "X",
+      "name": "VOILÀ x GRAND 8",
+      "bio": "Improvisées et non montées, simplement mixées, les pistes audio regroupées ici constituent l’archive du processus d’épuisement mené par le duo du 11 au 14 novembre 2021 à Caen (LABA).",
+    },
+    {
+      "id": "H",
+      "letter": "8",
+      "name": "GRAND 8",
+      "bio": "Composé de Clément et Jean, le duo de musiciens GRAND 8 ..........................",
+    },
+    {
+      "id": "V",
+      "letter": "V",
+      "name": "VOILÀ",
+      "bio": "Simplement mis en page, les 88 polaroids de la série VOILÀ regroupées dans cette édition constituent l’archive de sculptures éphémères réalisées par Rodrigue de Ferluc de 2017 à 2021.",
+    },
+    {
+      "id": "P",
+      "letter": "P",
+      "name": "PROTOCOLE",
+      "bio": "Choisir un matériau/matière unique, Opérer une transformation éphémère et non-préméditée, Archiver l’expérience Recommencer jusqu’à épuisement",
+    },
+    {
+      "id": "CM",
+      "letter": "CM",
+      "name": "CLASSE MOYENNE EDITIONS",
+      "bio": "Fondée par Marie et Romain, la maison d’éditions Classe Moyenne ........",
+    },
+    {
+      "id": "OR",
+      "letter": "OR",
+      "name": "ONTO RECORDS",
+      "bio": "Onto Records est un label de musique indépendant fondé à Caen .....",
+    },
+  ];
 
   return (
     <Main
@@ -24,53 +67,21 @@ const Index = () => {
       </div>
       {/* Liste des liens */}
       <div className='flex justify-center'>
-        <ul className="flex flex-wrap text-xl lg:text-2xl">
-          <li className="mr-10 md:mr-14">
-            <Link href="#X">
-              <a className="border-none text-black hover:text-blue-700">
-                X
+        <ul className="link flex flex-wrap text-xl lg:text-2xl">
+        {data.map((_data) => {
+          const anchor = _data.id;
+           const handleScroll = () => {
+            gsap.to(window, {duration: 2, scrollTo: { y: "#" + anchor, offsetY: 250}});
+          }
+          return (
+          <li  key={_data.letter} className="mr-10 md:mr-14">
+            {/* <Link href={`#${_data.letter}`}> */}
+              <a  onClick={handleScroll} className="border-none text-black hover:text-blue-700">
+                {_data.letter}
               </a>
-            </Link>
+              {/* </Link> */}
           </li>
-          <li className="mr-10 md:mr-14">
-            <Link href="#8">
-              <a className="border-none text-black hover:text-blue-700">
-                8
-              </a>
-            </Link>
-          </li>
-          <li className="mr-10 md:mr-14">
-            <a
-              className="border-none text-black hover:text-blue-700"
-              href="#V"
-            >
-              V
-            </a>
-          </li>
-          <li className="mr-10 md:mr-14">
-            <a
-              className="border-none text-black hover:text-blue-700"
-              href="#P"
-            >
-              P
-            </a>
-          </li>
-          <li className="mr-10 md:mr-14">
-            <a
-              className="border-none text-black hover:text-blue-700"
-              href="#CM"
-            >
-              CM
-            </a>
-          </li>
-          <li className="">
-            <a
-              className="border-none text-black hover:text-blue-700"
-              href="#OR"
-            >
-              OR
-            </a>
-          </li>
+        )})}
         </ul>
       </div>
       {/* titre+sous-titre */}
@@ -78,113 +89,21 @@ const Index = () => {
         <p className='text-center my-1'>VOILÀ x GRAND 8</p>
         <p className='text-center my-1'>CLASSE MOYENNE ÉDITIONS x ONTO </p>
       </div>
-      <hr className='w-1/2 mx-auto border-2 mt-20 border-black'></hr>
+      <hr className='w-1/2 mx-6 md:mx-auto border-2 mt-20 border-black'></hr>
       <div className='relative md:left-28'>
-      {/* Ancer X */}
-      <div className='mt-52 px-5 grid grid-cols-2 md:grid-cols-bio justify-end gap-4'>
-        <h2 className='text-7xl md:text-bigLetter text-center leading-bigLetter'>X</h2>
-        <div id='X' className="md:w-colRight">
-          <h3 className='text-2xl'>
-            VOILÀ X GRAND 8
-          </h3>
-          <p className='text-xs xl:text-base'>
-            Improvisées et non montées, simplement mixées, les pistes audio regroupées ici constituent l’archive du processus d’épuisement mené par le duo du 11 au 14 novembre 2021 à Caen (LABA).
-          </p>
-        </div>
-      </div>
-     
-        {/* Ancer 8 */}
-        <div className='mt-52 px-5 grid grid-cols-2 md:grid-cols-bio justify-end gap-4'>
-          <h2 className='text-7xl md:text-bigLetter text-center leading-bigLetter'>8</h2>
-          <div id='8' className="md:w-colRight">
-            <h3 className='text-2xl'>
-              GRAND 8
-            </h3>
-            <p className='text-xs xl:text-base'>
-              Composé de Clément et Jean, le duo de musiciens GRAND 8 <br />
-
-              Composed by Clément and Jean, the duo of musicians GRAND 8 </p>
+              {data.map((_data) => (
+          <div key={_data.letter} className='mt-52 px-5 grid grid-cols-2 md:grid-cols-bio justify-end gap-4'>
+            <h2 className='text-7xl md:text-bigLetter text-center leading-bigLetter'>{_data.letter}</h2>
+            <div id={_data.id} className="md:w-colRight">
+              <h3 className='text-2xl'>
+                {_data.name}
+              </h3>
+              <p className='text-xs xl:text-base'>
+                {_data.bio}
+              </p>
+            </div>
           </div>
-        </div>
-        {/* Ancer V */}
-        <div className='mt-52 px-5 grid grid-cols-2 md:grid-cols-bio justify-end gap-4'>
-          <h2 className='text-7xl md:text-bigLetter text-center leading-bigLetter'>V</h2>
-          <div id='V' className="md:w-colRight">
-            <h3 className='text-2xl'>
-              VOILÀ
-            </h3>
-            <p className='text-xs xl:text-base'>
-              Simplement mis en page, les 88 polaroids de la série VOILÀ regroupées dans cette édition constituent l’archive de sculptures éphémères réalisées par
-              Rodrigue de Ferluc de 2017 à 2021<br />
-              Simply laid out, the 88 polaroids of the VOILÀ series grouped together in this book constitute
-              the archive of ephemeral sculptures made by Rodrigue de Ferluc from 2017 to 2021 </p>
-          </div>
-        </div>
-        {/* Ancer P */}
-        <div className='mt-52 px-5 grid grid-cols-2 md:grid-cols-bio justify-end gap-4'>
-          <h2 className='text-7xl md:text-bigLetter text-center leading-bigLetter'>P</h2>
-          <div id='P' className="md:w-colRight">
-            <h3 className='text-2xl'>
-              PROTOCOLE
-            </h3>
-            <p className='text-xs xl:text-base'>
-              Choisir un matériau/matière unique
-              Opérer une transformation éphémère et non-préméditée
-              Archiver l’expérience
-              Recommencer jusqu’à épuisement
-              <br />
-              <em>
-                Choose a unique material
-                Carry out an ephemeral and unpremeditated transformation
-                Archive the experience
-                Repeat until exhaustion
-              </em>
-            </p>
-          </div>
-        </div>
-        {/* Ancer CM */}
-        <div className='mt-52 px-5 grid grid-cols-2 md:grid-cols-bio justify-end gap-4'>
-          <h2 className='text-7xl md:text-bigLetter text-center leading-bigLetter'>CM</h2>
-          <div id='CM' className="md:w-colRight">
-            <h3 className='text-2xl'>
-              CLASSE MOYENNE EDITIONS          </h3>
-            <p className='text-xs xl:text-base'>
-              Choisir un matériau/matière unique
-              Opérer une transformation éphémère et non-préméditée
-              Archiver l’expérience
-              Recommencer jusqu’à épuisement
-              <br />
-              <em>
-                Choose a unique material
-                Carry out an ephemeral and unpremeditated transformation
-                Archive the experience
-                Repeat until exhaustion
-              </em>
-            </p>
-          </div>
-        </div>
-        {/* Ancer OR */}
-        <div className='mt-52 px-5 grid grid-cols-2 md:grid-cols-bio justify-end gap-4'>
-          <h2 className='text-7xl md:text-bigLetter text-center leading-bigLetter'>OR</h2>
-          <div id='OR' className="md:w-colRight">
-            <h3 className='text-2xl'>
-              ONTO RECORDS
-            </h3>
-            <p className='text-xs xl:text-base'>
-              Choisir un matériau/matière unique
-              Opérer une transformation éphémère et non-préméditée
-              Archiver l’expérience
-              Recommencer jusqu’à épuisement
-              <br />
-              <em>
-                Choose a unique material
-                Carry out an ephemeral and unpremeditated transformation
-                Archive the experience
-                Repeat until exhaustion
-              </em>
-            </p>
-          </div>
-        </div>
+        ))}
       </div>
     </Main>
   );

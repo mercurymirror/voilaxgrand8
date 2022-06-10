@@ -17,6 +17,10 @@ a:hover {
   @apply border-b-2 border-blue-700;
 }
 
+#X, #8, #V, #P, #CM, #OR {
+  scroll-behavior: smooth;
+}
+
 @tailwind components;
 
 @tailwind utilities;
@@ -27,6 +31,9 @@ a:hover {
 
 .content ul {
   @apply my-6;
+}
+.link li:last-child {
+  margin-right: 0;
 }
 
 .huit {
