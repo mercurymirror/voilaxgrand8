@@ -24,7 +24,7 @@ const Index = () => {
       </div>
       {/* Liste des liens */}
       <div className='flex justify-center'>
-        <ul className="flex flex-wrap text-xl lg:text-3xl">
+        <ul className="flex flex-wrap text-xl lg:text-2xl">
           <li className="mr-10 md:mr-14">
             <Link href="#X">
               <a className="border-none text-black hover:text-blue-700">
@@ -81,10 +81,10 @@ const Index = () => {
       <hr className='w-1/2 mx-auto border-2 mt-20 border-black'></hr>
       <div className='relative md:left-28'>
       {/* Ancer X */}
-      <div className='mt-52 grid grid-cols-bio justify-end gap-4'>
-        <h2 className='text-10xl md:text-bigLetter text-center leading-bigLetter'>X</h2>
-        <div id='X' className="w-colRight">
-          <h3 className='text-3xl'>
+      <div className='mt-52 px-5 grid grid-cols-2 md:grid-cols-bio justify-end gap-4'>
+        <h2 className='text-7xl md:text-bigLetter text-center leading-bigLetter'>X</h2>
+        <div id='X' className="md:w-colRight">
+          <h3 className='text-2xl'>
             VOILÀ X GRAND 8
           </h3>
           <p className='text-xs xl:text-base'>
@@ -94,10 +94,10 @@ const Index = () => {
       </div>
      
         {/* Ancer 8 */}
-        <div className='mt-52 grid grid-cols-bio justify-end gap-4'>
-          <h2 className='text-10xl md:text-bigLetter text-center leading-bigLetter'>8</h2>
-          <div id='8' className="w-colRight">
-            <h3 className='text-3xl'>
+        <div className='mt-52 px-5 grid grid-cols-2 md:grid-cols-bio justify-end gap-4'>
+          <h2 className='text-7xl md:text-bigLetter text-center leading-bigLetter'>8</h2>
+          <div id='8' className="md:w-colRight">
+            <h3 className='text-2xl'>
               GRAND 8
             </h3>
             <p className='text-xs xl:text-base'>
@@ -107,10 +107,10 @@ const Index = () => {
           </div>
         </div>
         {/* Ancer V */}
-        <div className='mt-52 grid grid-cols-bio justify-end gap-4'>
-          <h2 className='text-10xl md:text-bigLetter text-center leading-bigLetter'>V</h2>
-          <div id='V' className="w-colRight">
-            <h3 className='text-3xl'>
+        <div className='mt-52 px-5 grid grid-cols-2 md:grid-cols-bio justify-end gap-4'>
+          <h2 className='text-7xl md:text-bigLetter text-center leading-bigLetter'>V</h2>
+          <div id='V' className="md:w-colRight">
+            <h3 className='text-2xl'>
               VOILÀ
             </h3>
             <p className='text-xs xl:text-base'>
@@ -121,10 +121,10 @@ const Index = () => {
           </div>
         </div>
         {/* Ancer P */}
-        <div className='mt-52 grid grid-cols-bio justify-end gap-4'>
-          <h2 className='text-10xl md:text-bigLetter text-center leading-bigLetter'>P</h2>
-          <div id='P' className="w-colRight">
-            <h3 className='text-3xl'>
+        <div className='mt-52 px-5 grid grid-cols-2 md:grid-cols-bio justify-end gap-4'>
+          <h2 className='text-7xl md:text-bigLetter text-center leading-bigLetter'>P</h2>
+          <div id='P' className="md:w-colRight">
+            <h3 className='text-2xl'>
               PROTOCOLE
             </h3>
             <p className='text-xs xl:text-base'>
@@ -143,10 +143,10 @@ const Index = () => {
           </div>
         </div>
         {/* Ancer CM */}
-        <div className='mt-52 grid grid-cols-bio justify-end gap-4'>
-          <h2 className='text-10xl md:text-bigLetter text-center leading-bigLetter'>CM</h2>
-          <div id='CM' className="w-colRight">
-            <h3 className='text-3xl'>
+        <div className='mt-52 px-5 grid grid-cols-2 md:grid-cols-bio justify-end gap-4'>
+          <h2 className='text-7xl md:text-bigLetter text-center leading-bigLetter'>CM</h2>
+          <div id='CM' className="md:w-colRight">
+            <h3 className='text-2xl'>
               CLASSE MOYENNE EDITIONS          </h3>
             <p className='text-xs xl:text-base'>
               Choisir un matériau/matière unique
@@ -164,10 +164,10 @@ const Index = () => {
           </div>
         </div>
         {/* Ancer OR */}
-        <div className='mt-52 grid grid-cols-bio justify-end gap-4'>
-          <h2 className='text-10xl md:text-bigLetter text-center leading-bigLetter'>OR</h2>
-          <div id='OR' className="w-colRight">
-            <h3 className='text-3xl'>
+        <div className='mt-52 px-5 grid grid-cols-2 md:grid-cols-bio justify-end gap-4'>
+          <h2 className='text-7xl md:text-bigLetter text-center leading-bigLetter'>OR</h2>
+          <div id='OR' className="md:w-colRight">
+            <h3 className='text-2xl'>
               ONTO RECORDS
             </h3>
             <p className='text-xs xl:text-base'>
