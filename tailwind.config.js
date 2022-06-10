@@ -18,6 +18,9 @@ module.exports = {
     lineHeight: {
       bigLetter: 0.8,
     },
+    width: {
+      colRight: "30rem",
+    },
     extend: {
       colors: {
         gray: {
@@ -42,6 +45,10 @@ module.exports = {
           800: '#2c5282',
           900: '#2a4365',
         },
+      },
+      gridTemplateColumns: {
+        // custom grid col for cards
+        bio: "[first] 25rem [second] 30rem",
       },
     },
   },

@@ -21,7 +21,7 @@ const Index = () => {
           width="600"
         />
         <p className='huit absolute'>8</p>
-        </div>
+      </div>
       {/* Liste des liens */}
       <div className='flex justify-center'>
         <ul className="flex flex-wrap text-xl lg:text-3xl">
@@ -50,7 +50,7 @@ const Index = () => {
           <li className="mr-10 md:mr-14">
             <a
               className="border-none text-black hover:text-blue-700"
-              href="https://github.com/ixartz/Next-js-Boilerplate"
+              href="#P"
             >
               P
             </a>
@@ -58,7 +58,7 @@ const Index = () => {
           <li className="mr-10 md:mr-14">
             <a
               className="border-none text-black hover:text-blue-700"
-              href="https://github.com/ixartz/Next-js-Boilerplate"
+              href="#CM"
             >
               CM
             </a>
@@ -66,7 +66,7 @@ const Index = () => {
           <li className="">
             <a
               className="border-none text-black hover:text-blue-700"
-              href="https://github.com/ixartz/Next-js-Boilerplate"
+              href="#OR"
             >
               OR
             </a>
@@ -79,10 +79,11 @@ const Index = () => {
         <p className='text-center my-1'>CLASSE MOYENNE ÉDITIONS x ONTO </p>
       </div>
       <hr className='w-1/2 mx-auto border-2 mt-20 border-black'></hr>
+      <div className='relative md:left-28'>
       {/* Ancer X */}
-      <div className='mt-52 md:ml-52 grid grid-cols-2 justify-end max-w-xl gap-4'>
+      <div className='mt-52 grid grid-cols-bio justify-end gap-4'>
         <h2 className='text-10xl md:text-bigLetter text-center leading-bigLetter'>X</h2>
-        <div id='X'>
+        <div id='X' className="w-colRight">
           <h3 className='text-3xl'>
             VOILÀ X GRAND 8
           </h3>
@@ -91,30 +92,98 @@ const Index = () => {
           </p>
         </div>
       </div>
-      {/* Ancer 8 */}
-      <div className='mt-52 md:ml-52 grid grid-cols-2 justify-end max-w-xl gap-4'>
-        <h2 className='text-10xl md:text-bigLetter text-center leading-bigLetter'>8</h2>
-        <div id='8'>
-          <h3 className='text-3xl'>
-          GRAND 8
-          </h3>
-          <p className='text-xs xl:text-base'>
-          Composé de Clément et Jean, le duo de musiciens GRAND 8 <br/>
+     
+        {/* Ancer 8 */}
+        <div className='mt-52 grid grid-cols-bio justify-end gap-4'>
+          <h2 className='text-10xl md:text-bigLetter text-center leading-bigLetter'>8</h2>
+          <div id='8' className="w-colRight">
+            <h3 className='text-3xl'>
+              GRAND 8
+            </h3>
+            <p className='text-xs xl:text-base'>
+              Composé de Clément et Jean, le duo de musiciens GRAND 8 <br />
 
-Composed by Clément and Jean, the duo of musicians GRAND 8 </p>
+              Composed by Clément and Jean, the duo of musicians GRAND 8 </p>
+          </div>
         </div>
-      </div>
-          {/* Ancer V */}
-          <div className='mt-52 md:ml-52 grid grid-cols-2 justify-end max-w-xl gap-4'>
-        <h2 className='text-10xl md:text-bigLetter text-center leading-bigLetter'>V</h2>
-        <div id='V'>
-          <h3 className='text-3xl'>
-          GRAND 8
-          </h3>
-          <p className='text-xs xl:text-base'>
-          Composé de Clément et Jean, le duo de musiciens GRAND 8 <br/>
-
-Composed by Clément and Jean, the duo of musicians GRAND 8 </p>
+        {/* Ancer V */}
+        <div className='mt-52 grid grid-cols-bio justify-end gap-4'>
+          <h2 className='text-10xl md:text-bigLetter text-center leading-bigLetter'>V</h2>
+          <div id='V' className="w-colRight">
+            <h3 className='text-3xl'>
+              VOILÀ
+            </h3>
+            <p className='text-xs xl:text-base'>
+              Simplement mis en page, les 88 polaroids de la série VOILÀ regroupées dans cette édition constituent l’archive de sculptures éphémères réalisées par
+              Rodrigue de Ferluc de 2017 à 2021<br />
+              Simply laid out, the 88 polaroids of the VOILÀ series grouped together in this book constitute
+              the archive of ephemeral sculptures made by Rodrigue de Ferluc from 2017 to 2021 </p>
+          </div>
+        </div>
+        {/* Ancer P */}
+        <div className='mt-52 grid grid-cols-bio justify-end gap-4'>
+          <h2 className='text-10xl md:text-bigLetter text-center leading-bigLetter'>P</h2>
+          <div id='P' className="w-colRight">
+            <h3 className='text-3xl'>
+              PROTOCOLE
+            </h3>
+            <p className='text-xs xl:text-base'>
+              Choisir un matériau/matière unique
+              Opérer une transformation éphémère et non-préméditée
+              Archiver l’expérience
+              Recommencer jusqu’à épuisement
+              <br />
+              <em>
+                Choose a unique material
+                Carry out an ephemeral and unpremeditated transformation
+                Archive the experience
+                Repeat until exhaustion
+              </em>
+            </p>
+          </div>
+        </div>
+        {/* Ancer CM */}
+        <div className='mt-52 grid grid-cols-bio justify-end gap-4'>
+          <h2 className='text-10xl md:text-bigLetter text-center leading-bigLetter'>CM</h2>
+          <div id='CM' className="w-colRight">
+            <h3 className='text-3xl'>
+              CLASSE MOYENNE EDITIONS          </h3>
+            <p className='text-xs xl:text-base'>
+              Choisir un matériau/matière unique
+              Opérer une transformation éphémère et non-préméditée
+              Archiver l’expérience
+              Recommencer jusqu’à épuisement
+              <br />
+              <em>
+                Choose a unique material
+                Carry out an ephemeral and unpremeditated transformation
+                Archive the experience
+                Repeat until exhaustion
+              </em>
+            </p>
+          </div>
+        </div>
+        {/* Ancer OR */}
+        <div className='mt-52 grid grid-cols-bio justify-end gap-4'>
+          <h2 className='text-10xl md:text-bigLetter text-center leading-bigLetter'>OR</h2>
+          <div id='OR' className="w-colRight">
+            <h3 className='text-3xl'>
+              ONTO RECORDS
+            </h3>
+            <p className='text-xs xl:text-base'>
+              Choisir un matériau/matière unique
+              Opérer une transformation éphémère et non-préméditée
+              Archiver l’expérience
+              Recommencer jusqu’à épuisement
+              <br />
+              <em>
+                Choose a unique material
+                Carry out an ephemeral and unpremeditated transformation
+                Archive the experience
+                Repeat until exhaustion
+              </em>
+            </p>
+          </div>
         </div>
       </div>
     </Main>
