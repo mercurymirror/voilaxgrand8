@@ -48,3 +48,14 @@ a:hover {
   font-size: 4rem;
 }
 }
+
+.dots {
+width: 10px;
+height: 10px;
+background-color: #000000;
+position: absolute;
+border-radius: 100%;
+}
+.dots:hover {
+background-color: blue;
+}

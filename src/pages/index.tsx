@@ -1,4 +1,5 @@
-import Link from 'next/link';
+import useAudio from './UseAudio';
+
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 
@@ -48,6 +49,18 @@ const Index = () => {
     },
   ];
 
+  const dots = [
+    {
+      "id": "0",
+      "x": 100,
+      "y": 50,
+      "piste": "Improvisées et non montées, simplement mixées, les pistes audio regroupées ici constituent l’archive du processus d’épuisement mené par le duo du 11 au 14 novembre 2021 à Caen (LABA).",
+    },
+
+  ];
+
+  const audio = useAudio('/piste1.mp3', { volume: 0.8, playbackRate: 1 });
+ 
   return (
     <Main
       meta={
@@ -64,24 +77,28 @@ const Index = () => {
           width="600"
         />
         <p className='huit absolute'>8</p>
+        <div className='dots' onClick={() => audio.play()}>
+        </div>
+      
       </div>
       {/* Liste des liens */}
       <div className='flex justify-center'>
         <ul className="link flex flex-wrap text-xl lg:text-2xl">
-        {data.map((_data) => {
-          const anchor = _data.id;
-           const handleScroll = () => {
-            gsap.to(window, {duration: 2, scrollTo: { y: "#" + anchor, offsetY: 250}});
-          }
-          return (
-          <li  key={_data.letter} className="mr-10 md:mr-14">
-            {/* <Link href={`#${_data.letter}`}> */}
-              <a  onClick={handleScroll} className="border-none text-black hover:text-blue-700">
-                {_data.letter}
-              </a>
-              {/* </Link> */}
-          </li>
-        )})}
+          {data.map((_data) => {
+            const anchor = _data.id;
+            const handleScroll = () => {
+              gsap.to(window, { duration: 2, scrollTo: { y: "#" + anchor, offsetY: 250 } });
+            }
+            return (
+              <li key={_data.letter} className="mr-10 md:mr-14">
+                {/* <Link href={`#${_data.letter}`}> */}
+                <a onClick={handleScroll} className="border-none text-black hover:text-blue-700">
+                  {_data.letter}
+                </a>
+                {/* </Link> */}
+              </li>
+            )
+          })}
         </ul>
       </div>
       {/* titre+sous-titre */}
@@ -91,7 +108,7 @@ const Index = () => {
       </div>
       <hr className='w-1/2 mx-6 md:mx-auto border-2 mt-20 border-black'></hr>
       <div className='relative md:left-28'>
-              {data.map((_data) => (
+        {data.map((_data) => (
           <div key={_data.letter} className='mt-52 px-5 grid grid-cols-2 md:grid-cols-bio justify-end gap-4'>
             <h2 className='text-7xl md:text-bigLetter text-center leading-bigLetter'>{_data.letter}</h2>
             <div id={_data.id} className="md:w-colRight">
